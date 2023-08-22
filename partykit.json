@@ -1,0 +1,8 @@
+{
+  "name": "partykit-unstable-onfetch-repro",
+  "main": "src/server.ts",
+  "serve": {
+    "path": "public",
+    "build": "src/client.tsx"
+  }
+}
