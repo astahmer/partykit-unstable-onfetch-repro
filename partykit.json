@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/partykit/partykit/4624a2ded3161d46f0c8bac8b7b029fba1a8583d/packages/partykit/schema.json",
   "name": "partykit-unstable-onfetch-repro",
   "main": "src/server.ts",
   "serve": {

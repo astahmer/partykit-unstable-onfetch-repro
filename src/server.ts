@@ -37,4 +37,9 @@ export default {
       );
     });
   },
+  unstable_onFetch(req, lobby, ctx) {
+    // A fetch request just came in!
+    console.log(`Fetched: ${req.method} ${req.url}`);
+    return new Response("hello from server");
+  },
 } satisfies PartyKitServer;

@@ -35,3 +35,46 @@ conn.addEventListener("open", () => {
     conn.send("ping");
   }, 1000);
 });
+
+const btn = document.createElement("button");
+btn.setAttribute("type", "button");
+btn.innerText = "Post on /";
+btn.onclick = () => {
+  // This one is not working, probably because of the client.tsx+serve ?
+  fetch("/", { method: "post" }).then((res) => {
+    console.log(res);
+  });
+};
+Object.assign(btn.style, {
+  position: "fixed",
+  top: "0",
+  left: "500px",
+  width: "100px",
+  height: "100px",
+  "text-align": "center",
+  background: "white",
+  padding: "10px",
+  zIndex: "9999",
+});
+document.body.appendChild(btn);
+
+const btn2 = document.createElement("button");
+btn2.setAttribute("type", "button");
+btn2.innerText = "Get /abc";
+btn2.onclick = () => {
+  fetch("/abc").then((res) => {
+    console.log(res);
+  });
+};
+Object.assign(btn2.style, {
+  position: "fixed",
+  top: "0",
+  left: "700px",
+  width: "100px",
+  height: "100px",
+  "text-align": "center",
+  background: "white",
+  padding: "10px",
+  zIndex: "9999",
+});
+document.body.appendChild(btn2);
